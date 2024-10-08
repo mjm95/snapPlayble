@@ -4870,21 +4870,41 @@ function or(l, r)
 self.C3_ExpressionFuncs = [
 		() => 0,
 		() => "main",
-		() => 560,
-		() => 1600,
-		() => 1,
+		() => 2000,
 		() => "",
-		() => 1.2,
-		() => 0.5,
+		() => 0.3,
+		() => 1,
+		() => 5,
 		p => {
-			const n0 = p._GetNode(0);
-			return () => (n0.ExpObject() + 1);
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue() - 1);
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			return () => v0.GetValue();
 		},
 		() => 3,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpInstVar();
+		},
+		() => "play",
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() - 1540);
+		},
+		p => {
+			const n0 = p._GetNode(0);
+			return () => n0.ExpObject();
+		},
+		() => 0.5,
+		() => 2080,
+		() => 300,
+		p => {
+			const n0 = p._GetNode(0);
+			return () => (n0.ExpObject() * 1.2);
+		},
+		() => -1,
 		() => "cache-control'",
 		() => "no-cache",
 		() => "CSRF-Token'",
