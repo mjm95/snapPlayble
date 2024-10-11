@@ -4904,6 +4904,7 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() * 1.2);
 		},
+		() => "color",
 		() => -1,
 		() => "cache-control'",
 		() => "no-cache",
